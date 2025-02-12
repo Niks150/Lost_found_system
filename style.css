@@ -71,33 +71,31 @@ html {
     .nav_links a:hover i {
         color: black;
     }
-
-
-
-
     .filter-bar {
-        display: flex;
+        display: flex ; /* Ensures it's visible */
         justify-content: space-between;
+        margin-top: 75px;
         align-items: center;
         padding: 10px 20px;
         background-color: #f9f9f9;
         border-top: 1px solid #ddd;
+        position: relative;
+        z-index: 999; /* Ensures it appears above other elements */
     }
-
     .filter-category,
     .filter-search,
     .filter-options {
         display: flex;
         align-items: center;
     }
-
+    
     .filter-category select,
     .filter-options select {
         margin-left: 10px;
         padding: 5px;
         font-size: 14px;
     }
-
+    
     .filter-search input {
         padding: 5px;
         font-size: 14px;
@@ -105,7 +103,7 @@ html {
         border-radius: 4px;
         width: 355px;
     }
-
+    
     .filter-search button {
         margin-left: 5px;
         padding: 5px 10px;
@@ -115,14 +113,18 @@ html {
         border-radius: 4px;
         cursor: pointer;
     }
-
+    
     .filter-search button i {
         font-size: 16px;
     }
-
+    
     .filter-search button:hover {
         background-color: #0056b3;
     }
+
+
+
+   
 
     /*charts*/
     .charts {
@@ -131,7 +133,7 @@ html {
         justify-content: space-around;
         gap: 119px;
         flex-wrap: wrap;
-        margin-top: 68px;
+        margin-top: 15  px;
     }
 
     .chart-container {
