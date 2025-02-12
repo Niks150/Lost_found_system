@@ -8,68 +8,58 @@ body, html {
     height: 100vh;
 }
 
-/* Navigation Bar Container */
-.nav_container {
+/* Navigation Bar */
+.nav_bar {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    padding: 0 20px;
     background-color: white;
-    padding: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    
 }
 
-/* Navigation Bar */
-.nav_bar {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 80px;
-    padding: 0 15px;
-    background-color: white;
-   
-   
-}
-
-/* Navigation Links */
-.nav_bar a {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    padding: 12px 18px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-/* Icon Styling */
-.nav_bar a i {
-    color: black;
-    transition: color 0.3s ease;
-}
-
-/* Hover Effect */
-.nav_bar a:hover {
-    background-color: #f5f5f5;
-    color: black;
-    border-radius: 5px;
-}
-
-/* Hover Effect for Icons */
-.nav_bar a:hover i {
-    color: black;
-}
-
-/* Logo Styling */
 .nav_logo {
     height: 41px;
     width: auto;
     cursor: pointer;
-    left: -50px;
-    position: relative;
+}
+
+.nav_links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 600px; /* Pushes the links to the right */
+}
+
+.nav_links a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px; /* Smaller font size */
+    font-weight: bold;
+    transition: all 0.3s ease;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav_links a:hover {
+    background-color: #39a3f4;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.nav_links a i {
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.nav_links a:hover i {
+    color: black;
 }
 
 /* Toggle Buttons */
@@ -226,7 +216,7 @@ form button:hover {
     color: red;
     font-size: 15px;
 }
-<<<<<<< HEAD
+
 .dropdown {
     position: relative;
 }
@@ -267,5 +257,4 @@ form button:hover {
     background: #ddd;
 }
 
-=======
->>>>>>> 1ca45d921752b3f5ee3946f22f180c2f9bb6a52f
+
