@@ -1,0 +1,295 @@
+/* General Reset */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    /* Use Roboto font */
+    box-sizing: border-box;
+    background-color: #FFFDF2;
+    height: 100vh;
+}
+
+.nav_container {
+    background-color: white;
+    padding: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/* Navigation Bar */
+.nav_bar {
+    display: flex;
+    justify-content: space-evenly;
+    /* Evenly space all elements */
+    align-items: center;
+    height: 80px;
+    /* Slightly increased height */
+    padding: 0 15px;
+    /* Adjust padding for the navbar */
+}
+
+/* Navigation Links */
+.nav_bar a {
+    text-decoration: none;
+    color: black;
+    /* Set default font color to black */
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    /* Smooth transition for hover and active effects */
+    padding: 12px 18px;
+    /* Increased padding for better clickability */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Space between the icon and text */
+}
+
+/* Icon Styling */
+.nav_bar a i {
+    color: black;
+    /* Default icon color */
+    transition: color 0.3s ease;
+    /* Smooth color transition */
+}
+
+/* Hover Effect */
+.nav_bar a:hover {
+    background-color: #f5f5f5;
+    /* Light black background on hover */
+    color: black;
+    /* Font color stays black */
+    border-radius: 5px;
+    /* Rounded corners for the hover effect */
+}
+
+/* Hover Effect for Icons */
+.nav_bar a:hover i {
+    color: black;
+    /* Icon color stays black */
+}
+
+/* Active Effect */
+.nav_bar a:active {
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Logo Styling */
+.nav_logo {
+    height: 41px;
+    width: auto;
+    cursor: pointer;
+    left: -50px;
+    position: relative;
+}
+
+.emp-profile {
+    padding: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+
+.profile-img {
+    text-align: center;
+}
+
+.profile-img img {
+    border-radius: 50%;
+    height: 159px;
+    width: 167px;
+    background-position: center;
+    background-size: cover;
+}
+
+.profile-img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -20%;
+    width: 70%;
+    border: 50%;
+    border-radius: 0;
+    font-size: 15px;
+    background: #212529b8;
+}
+
+.profile-img .file input {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+
+.profile-head h5 {
+    color: #333;
+    font-size: 2.25rem;
+}
+
+.profile-head h6 {
+    color: #0062cc;
+}
+
+.profile-edit-btn {
+    border: none;
+    border-radius: 1.5rem;
+    width: 70%;
+    padding: 2%;
+    font-weight: 600;
+    color: #6c757d;
+    cursor: pointer;
+}
+
+.proile-rating {
+    font-size: 12px;
+    color: #818182;
+    margin-top: 5%;
+}
+
+.proile-rating span {
+    color: #495057;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.profile-head .nav-tabs {
+    margin-bottom: 5%;
+}
+
+.profile-head .nav-tabs .nav-link {
+    font-weight: 600;
+    border: none;
+}
+
+.profile-head .nav-tabs .nav-link.active {
+    border: none;
+    border-bottom: 2px solid #0062cc;
+}
+
+.profile-work {
+    padding: 14%;
+    margin-top: -15%;
+}
+
+.profile-work p {
+    font-size: 12px;
+    color: #818182;
+    font-weight: 600;
+    margin-top: 10%;
+}
+
+.profile-work a {
+    text-decoration: none;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.profile-work ul {
+    list-style: none;
+}
+
+.profile-tab label {
+    font-weight: 600;
+}
+
+.profile-tab p {
+    font-weight: 600;
+    color: #0062cc;
+}
+
+.link {
+    font-size: 10px;
+}
+
+#add_link {
+    height: 27px;
+    width: 114px;
+    border: 1px solid;
+    font-size: 13px;
+
+}
+
+#add_link:active {
+    color: white;
+}
+
+.edit_profile {
+    border-radius: 30px;
+    border-color: grey;
+    background-color: rgba(128, 128, 128, 0.356);
+    color: black;
+    height: 27px;
+    width: 110px;
+    display: flex;
+    justify-content: center;
+}
+.edit_profile a:active{
+    color:white;
+}
+.edit_profile a {
+    color: gray;
+    
+}
+.edit_profile a:hover{
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .nav_bar {
+        flex-direction: column;
+        height: auto;
+    }
+<<<<<<< HEAD
+}
+.dropdown {
+    position: relative;
+}
+
+/* Initially hide the dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+    width: 150px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000; /* Ensures it stays on top */
+}
+
+/* Show dropdown menu when hovering over the parent */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Styling for dropdown menu items */
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background: #ddd;
+=======
+>>>>>>> 1ca45d921752b3f5ee3946f22f180c2f9bb6a52f
+}

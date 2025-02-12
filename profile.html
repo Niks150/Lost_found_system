@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css">
+    <script src="https://kit.fontawesome.com/3ec8f51ae6.js" crossorigin="anonymous"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/3ec8f51ae6.js" crossorigin="anonymous"></script>
+    <title>Profile</title>
+</head>
+
+<body>
+    <div class="nav_container">
+        <div class="nav_bar">
+            <img src="/assests/logo.png" alt="Parul University Logo" class="nav_logo">
+            <a href="index.html"><i class="fa fa-home"></i> Home</a>
+            <div class="dropdown">
+                <a href="#"><i class="fa fa-search"></i> Lost </a>
+                <div class="dropdown-menu">
+                    <a href="lost.html">Lost</a>
+                    <a href="items.html"> Founded Items</a>
+                    <a href="lost.html">Found</a>
+                    <a href="#">Report</a>
+                </div>
+            </div>
+            <a href="buy_sell.html"><i class="fa fa-map-marker"></i> Buy & Sell</a>
+            <div class="dropdown">
+                <a href="profile.html"><i class="fa fa-user"></i> Profile</a>
+                <div class="dropdown-menu">
+                                
+                    <a href="#">Edit Profile</a>
+                    
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="login.html" alt="_main"><i class="fa-solid fa-right-to-bracket"></i>  Login</a>
+                <div class="dropdown-menu">
+                    <a href="#">Log Out</a>             
+                    <a href="#">Report issue</a>
+
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="container emp-profile">
+        <form method="post">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="profile-img">
+                        <img src="/assests/profile.jpg"
+                            alt="" />
+
+                        <br>
+                        <br>
+                        <br>
+                        <div class="file btn btn-lg btn-primary">
+                            Change Photo
+                            <input type="file" name="file" >
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="profile-head">
+                        <h5>
+                            <b>Swami SandeepKumar</b>
+                        </h5>
+
+                        <h6>
+                            Web Developer and Designer
+                        </h6>
+                        <br>
+                        <br>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                    aria-controls="home" aria-selected="true">About</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="edit_profile">
+                    <a href="#"><i class="fa-regular fa-pen-to-square"></i> Edit Profile</a>
+                </div>
+                 
+                
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="profile-work">
+                        <p>Add your Links</p>
+                        <a href="#" id="add_link">Add Link    <i class="fa-solid fa-pen"></i></i></a>
+                        <br>
+                        <a href="https://github.com/Niks150/Niks150">Git Hub : <h4 class="link">
+                                https://github.com/Niks150/Niks150</h4></a>
+                        <a href="https://www.linkedin.com/in/sandeep-swami-b14553321/">LinkedIn :<h4 class="link">
+                                https://www.linkedin.com/in/sandeep-swami-b14553321/</h4> </a>
+
+                       
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="tab-content profile-tab" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Parul Enrollment No.</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>2203031080277</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Name</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>Swami Sandeep</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 ">
+                                    <label>Email</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>sandeepswami344@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Phone</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>9016372258</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Profession</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>Web Developer and Designer</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

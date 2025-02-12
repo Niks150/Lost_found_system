@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="/assests/list_LL.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items</title>
+    <!-- Font Awesome Link -->
+    <script src="https://kit.fontawesome.com/3ec8f51ae6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="items.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav_container">
+        <div class="nav_bar">
+            <img src="/assests/logo.png" alt="Parul University Logo" class="nav_logo">
+            <a href="index.html"><i class="fa fa-home"></i> Home</a>
+            <div class="dropdown">
+                <a href="#"><i class="fa fa-search"></i> Lost </a>
+                <div class="dropdown-menu">
+                    <a href="lost.html">Lost</a>
+                    <a href="items.html"> Founded Items</a>
+                    <a href="lost.html">Found</a>
+                    <a href="#">Report</a>
+                </div>
+            </div>
+            <a href="buy_sell.html"><i class="fa fa-map-marker"></i> Buy & Sell</a>
+            <div class="dropdown">
+                <a href="profile.html"><i class="fa fa-user"></i> Profile</a>
+                <div class="dropdown-menu">
+                                
+                    <a href="#">Edit Profile</a>
+                    
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="login.html" alt="_main"><i class="fa-solid fa-right-to-bracket"></i>  Login</a>
+                <div class="dropdown-menu">
+                    <a href="#">Log Out</a>             
+                    <a href="#">Report issue</a>
+
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <!-- Scrollable Container -->
+    <div class="scrollable-container">
+        <!-- Clickable Boxes with Images -->
+        <script>
+            const imageGallery = document.getElementById("image-gallery");
+            const totalImages = 35; // Set the total number of images in the folder
+            const imageFolder = "/images"; // Path to your images folder
+          
+            for (let i = 1; i <= totalImages; i++) {
+              const img = document.createElement("img");
+              img.src = `${imageFolder}image (${i}).jpg`; // Change format if needed (PNG, JPEG, etc.)
+              img.alt = `Image ${i}`;
+          
+              const anchor = document.createElement("a");
+              anchor.href = "#";
+              anchor.classList.add("box");
+              anchor.appendChild(img);
+          
+              imageGallery.appendChild(anchor);
+            }
+          </script>
+
+
+        <!-- Overlay for displaying detailed information -->
+        <div id="overlay" style="display: none;">
+            <div id="small-box">
+                <button id="close-btn">❌</button>
+                <img id="overlay-image" src="" alt="Selected Item">
+                <div class="section">
+                    <strong>Item Name</strong>
+                    <p id="item-name">apple airpods</p>
+                </div>
+                <div class="section">
+                    <strong>Last Seen Location</strong>
+                    <p id="item-location">Founded at Kathi Junction</p>
+                </div>
+                <div class="section">
+                    <strong>Description:</strong>
+                    <p id="item-description">White color Airpods</p>
+                </div>
+                <div class="section">
+                    <strong>Date (in DD/MM/YYYY):</strong>
+                    <p id="item-date">12/12/2024</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="items.js"></script>
+
+</body>
+
+</html>

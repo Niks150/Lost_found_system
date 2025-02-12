@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buy & Sell Page</title>
+  <link rel="stylesheet" href="buy_sell.css">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="nav_container">
+    <div class="nav_bar">
+      <img src="/assests/logo.png" alt="Parul University Logo" class="nav_logo">
+      <a href="index.html"><i class="fa fa-home"></i> Home</a>
+      <div class="dropdown">
+          <a href="#"><i class="fa fa-search"></i> Lost </a>
+          <div class="dropdown-menu">
+              <a href="lost.html">Lost</a>
+              <a href="items.html"> Founded Items</a>
+              <a href="lost.html">Found</a>
+              <a href="#">Report</a>
+          </div>
+      </div>
+      <a href="buy_sell.html"><i class="fa fa-map-marker"></i> Buy & Sell</a>
+      <div class="dropdown">
+          <a href="profile.html"><i class="fa fa-user"></i> Profile</a>
+          <div class="dropdown-menu">
+                          
+              <a href="#">Edit Profile</a>
+              
+          </div>
+      </div>
+      <div class="dropdown">
+          <a href="login.html" alt="_main"><i class="fa-solid fa-right-to-bracket"></i>  Login</a>
+          <div class="dropdown-menu">
+              <a href="#">Log Out</a>             
+              <a href="#">Report issue</a>
+
+              
+          </div>
+      </div>
+      
+  </div>
+  </div>
+
+  <div class="scrollable-container">
+    <script>
+      for (let i = 1; i <= 20; i++) {
+        document.write(`
+          <div class="box" onclick="showOverlay('Product ${i}', 'This is product ${i}', '12/12/2024', '₹${(Math.floor(Math.random() * 50000) + 1000).toLocaleString('en-IN')}')">
+            <img src="https://picsum.photos/220?random=${i}" alt="Product Image">
+            <div class="details">
+              
+              <div class="price">₹${(Math.floor(Math.random() * 50000) + 1000).toLocaleString('en-IN')}</div>
+              <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+              <div class="description">Product ${i} Short Description</div>
+              <div class="location-date">
+                <span class="location">NARSINGI, HYDERABAD</span>
+                <span class="date">JAN 26</span>
+              </div>
+            </div>
+          </div>
+        `);
+      }
+    </script>
+  </div>
+  <div id="overlay" style="display: none;">
+    <div id="small-box">
+        <button id="close-btn">❌</button>
+        <img id="overlay-image" src="" alt="Selected Item">
+        <div class="section">
+            <strong>Item Name</strong>
+            <p id="item-name">apple airpods</p>
+        </div>
+        <div class="section">
+            <strong>Last Seen Location</strong>
+            <p id="item-location">Founded at Kathi Junction</p>
+        </div>
+        <div class="section">
+            <strong>Description:</strong>
+            <p id="item-description">White color Airpods</p>
+        </div>
+        <div class="section">
+            <strong>Date (in DD/MM/YYYY):</strong>
+            <p id="item-date">12/12/2024</p>
+        </div>
+    </div>
+</div>
+
+  
+</body>
+</html>

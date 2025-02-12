@@ -1,0 +1,168 @@
+<!-- Modal -->
+        <div id="login-modal">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+                <div id="modal-body"></div>
+            </div>
+        </div>
+
+
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+footer .section1 {
+    margin: 0 auto;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+
+
+
+
+ <marquee direction="left"  >
+            
+               <h1 class=" note">Hyy If you Lost something Dont worry Register Fast , So you can see your Lost Itms
+            </h1>
+
+        </marquee>
+
+        <!-- Main Grid -->
+        <div class="box-container-main">
+            <div class="box-container-grid">
+                <div class="box-item">
+                    <a href="#"> <img src="https://picsum.photos/200?random=1"
+                            alt="Cushion covers, bedsheets & more"></a>
+                    <p>Cushion covers, bedsheets & more</p>
+                </div>
+                <div class="box-item">
+                    <a href="#"> <img src="https://picsum.photos/200?random=2" alt="Figurines, vases & more"></a>
+                    <p>Figurines, vases & more</p>
+                </div>
+                <div class="box-item">
+                    <a href="#"> <img src="https://picsum.photos/200?random=3" alt="Home storage"></a>
+                    <p>Home storage</p>
+                </div>
+                <div class="box-item">
+                    <a href="#"> <img src="https://picsum.photos/200?random=4" alt="Lighting solutions"></a>
+                    <p>Lighting solutions</p>
+                </div>
+            </div>
+            <a href="items.html" class="explore-all">Explore all</a>
+        </div>
+
+        <!-- Secondary Grid -->
+        <div class="box-container-2">
+            <div class="box-container-grid-2">
+                <div class="box-item-2">
+                    <a href="#"> <img src="https://picsum.photos/200?random=1"
+                            alt="Cushion covers, bedsheets & more"></a>
+                    <p>Cushion covers, bedsheets & more</p>
+                </div>
+                <div class="box-item-2">
+                    <a href="#"> <img src="https://picsum.photos/200?random=2" alt="Figurines, vases & more"></a>
+                    <p>Figurines, vases & more</p>
+                </div>
+                <div class="box-item-2">
+                    <a href="#"> <img src="https://picsum.photos/200?random=3" alt="Home storage"></a>
+                    <p>Home storage</p>
+                </div>
+                <div class="box-item-2">
+                    <a href="#"> <img src="https://picsum.photos/200?random=4" alt="Lighting solutions"></a>
+                    <p>Lighting solutions</p>
+                </div>
+            </div>
+            <a href="items.html" class="explore-all">Explore all</a>
+        </div>
+
+        <div class="box-container-3">
+            <div class="box-container-grid-2">
+                <div class="box-item-2">
+                    <a href="#"> <img src="https://picsum.photos/200?random=1"
+                            alt="Cushion covers, bedsheets & more"></a>
+                    <p>Cushion covers, bedsheets & more</p>
+                </div>
+                <div class="box-item-2">
+                    <a href="#"> <img src="https://picsum.photos/200?random=2" alt="Figurines, vases & more"></a>
+                    <p>Figurines, vases & more</p>
+                </div>
+                <div class="box-item-2">
+                    <a href="#"> <img src="https://picsum.photos/200?random=3" alt="Home storage"></a>
+                    <p>Home storage</p>
+                </div>
+                <div class="box-item-2">
+                    <a href="#"> <img src="https://picsum.photos/200?random=4" alt="Lighting solutions"></a>
+                    <p>Lighting solutions</p>
+                </div>
+            </div>
+            <a href="items.html" class="explore-all">Explore all</a>
+        </div>
+
+        <div class="box-container-4">
+            <div class="box-container-grid-2">
+
+                <a href="https://paruluniversity.ac.in/"> <img src="/assests/parul_pic_1.jpg" alt="parul"></a>
+            </div>
+            <a href="https://paruluniversity.ac.in/" class="explore-all">Apply for admission</a>
+        </div>
+        <div class="box-container-5">
+            <div class="box-container-grid-2">
+                <div class="box-item-2">
+                    <a href="#"> <img src="https://picsum.photos/200?random=1"
+                            alt="Cushion covers, bedsheets & more"></a>
+                    <p>Cushion covers, bedsheets & more</p>
+                </div>
+                <div class="box-item-2">
+                    <a href="#"> <img src="https://picsum.photos/200?random=2" alt="Figurines, vases & more"></a>
+                    <p>Figurines, vases & more</p>
+                </div>
+                <div class="box-item-2">
+                    <a href="#"> <img src="https://picsum.photos/200?random=3" alt="Home storage"></a>
+                    <p>Home storage</p>
+                </div>
+                <div class="box-item-2">
+                    <a href="#"> <img src="https://picsum.photos/200?random=4" alt="Lighting solutions"></a>
+                    <p>Lighting solutions</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .nav_bar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .box {
+        width: 150px;
+        height: 150px;
+    }
+
+    #small-box {
+        width: 90%;
+        height: auto;
+    }
+}

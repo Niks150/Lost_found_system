@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost and Found</title>
+    <script src="https://kit.fontawesome.com/3ec8f51ae6.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="lost.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav_bar">
+        <img src="/assests/logo.png" alt="Parul University Logo" class="nav_logo">
+        <a href="index.html"><i class="fa fa-home"></i> Home</a>
+        <div class="dropdown">
+            <a href="#"><i class="fa fa-search"></i> Lost </a>
+            <div class="dropdown-menu">
+                <a href="lost.html">Lost</a>
+                <a href="items.html"> Founded Items</a>
+                <a href="lost.html">Found</a>
+                <a href="#">Report</a>
+            </div>
+        </div>
+        <a href="buy_sell.html"><i class="fa fa-map-marker"></i> Buy & Sell</a>
+        <div class="dropdown">
+            <a href="profile.html"><i class="fa fa-user"></i> Profile</a>
+            <div class="dropdown-menu">
+                            
+                <a href="#">Edit Profile</a>
+                
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="login.html" alt="_main"><i class="fa-solid fa-right-to-bracket"></i>  Login</a>
+            <div class="dropdown-menu">
+                <a href="#">Log Out</a>             
+                <a href="#">Report issue</a>
+
+                
+            </div>
+        </div>
+        
+    </div>
+    <!-- Toggle Section -->
+    <div class="toggle-container">
+        <button id="toggle-lost" class="active">Lost</button>
+        <button id="toggle-found">Found</button>
+    </div>
+
+    <!-- Forms Section -->
+    <div class="form-wrapper">
+        <!-- Lost Form -->
+        <div id="lost-form-container">
+            <h2>Lost Item</h2>
+            <form id="lost-item-form">
+                <label for="lost-item-name">Item Name:<sup class="star">*</sup></label>
+                <input type="text" id="lost-item-name" name="item-name" required>
+
+                <label for="lost-category">Select Category:</label>
+                <select id="lost-category" name="category" required>
+                    <option value="" disabled selected>Select a category</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="accessories">Accessories</option>
+                    <option value="documents">Documents</option>
+                    <option value="others">Others</option>
+                </select>
+
+                <label for="lost-description">Description:</label>
+                <textarea id="lost-description" name="description" rows="4" required></textarea>
+
+                <label for="lost-location">Last Seen Location:<sup class="star">*</sup></label>
+                <input type="text" id="lost-location" name="location" required>
+
+                <label for="lost-image">Upload Image:</label>
+                <input type="file" id="lost-image" name="image" accept="image/*">
+
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <!-- Found Form -->
+        <div id="found-form-container" style="display: none;">
+            <h2>Found Item</h2>
+            <form id="found-item-form">
+                <label for="found-item-name">Item Name:<sup class="star">*</sup></label>
+                <input type="text" id="found-item-name" name="item-name" required>
+
+                <label for="found-category">Select Category:</label>
+                <select id="found-category" name="category" required>
+                    <option value="" disabled selected>Select a category</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="accessories">Accessories</option>
+                    <option value="documents">Documents</option>
+                    <option value="others">Others</option>
+                </select>
+
+                <label for="found-description">Description:<sup class="star">*</sup></label>
+                <textarea id="found-description" name="description" rows="4" required></textarea>
+
+                <label for="found-location">Found Location:<sup class="star">*</sup></label>
+                <input type="text" id="found-location" name="location" required>
+
+                <h2 id="calander" >Select a Date:<sup class="star">*</sup></h2>
+                <br>
+                <input type="text" class="calendar-input" id="calendar">
+
+                <label for="found-image">Upload Image:<sup class="star">*</sup></label>
+                <input type="file" id="found-image" name="image" accept="image/*">
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    
+    
+</body>
+<script src="lost.js"></script>
+
+</html>
