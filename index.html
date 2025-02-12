@@ -6,6 +6,8 @@
     <link rel="shortcut icon" type="x-icon" href="/assests/home_LL.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="charts.js"></script>
     <script src="home.js" defer></script>
     <!-- Font Awesome Link -->
     <script src="https://kit.fontawesome.com/3ec8f51ae6.js" crossorigin="anonymous"></script>
@@ -13,12 +15,12 @@
 </head>
 
 <body>
-   
-    
+
+
     <div class="nav_container">
         <div class="nav_bar">
             <img src="/assests/logo.png" alt="Parul University Logo" class="nav_logo">
-            
+
             <div class="nav_links">
                 <a href="index.html"><i class="fa fa-home"></i> Home</a>
                 <div class="dropdown">
@@ -38,147 +40,156 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <a href="login.html" alt="_main"><i class="fa-solid fa-right-to-bracket"></i>  Login</a>
+                    <a href="login.html" alt="_main"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
                     <div class="dropdown-menu">
-                        <a href="#">Log Out</a>             
+                        <a href="#">Log Out</a>
                         <a href="#">Report issue</a>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- New Filter, Search, and Category Section -->
-        <div class="filter-bar">
-            <!-- Category Options -->
-            <div class="filter-category">
-                <label for="category">Category:</label>
-                <select id="category">
-                    <option value="all">All</option>
-                    <option value="electronics">Electronics</option>
-                    <option value="clothing">Clothing</option>
-                    <option value="books">Books</option>
-                    <option value="furniture">Documents</option>
-                    <option value="furniture">Accessories</option>
-                </select>
-            </div>
-            <!-- Search Bar -->
-            <div class="filter-search">
-                <input type="text" placeholder="Search for items..." />
-                <button><i class="fa fa-search"></i></button>
-            </div>
-            <!-- Filter Options -->
-            <div class="filter-options">
-                <label for="filter">Filter:</label>
-                <select id="filter">
-                    <option value="latest">Latest</option>
-                    <option value="popular">Most Popular</option>
-                    <option value="price-asc">Price: Low to High</option>
-                    <option value="price-desc">Price: High to Low</option>
-                </select>
-            </div>
+    </div>
+
+    <!-- New Filter, Search, and Category Section -->
+    <div class="filter-bar">
+        <!-- Category Options -->
+        <div class="filter-category">
+            <label for="category">Category:</label>
+            <select id="category">
+                <option value="all">All</option>
+                <option value="electronics">Electronics</option>
+                <option value="clothing">Clothing</option>
+                <option value="books">Books</option>
+                <option value="furniture">Documents</option>
+                <option value="furniture">Accessories</option>
+            </select>
+        </div>
+        <!-- Search Bar -->
+        <div class="filter-search">
+            <input type="text" placeholder="Search for items..." />
+            <button><i class="fa fa-search"></i></button>
+        </div>
+        <!-- Filter Options -->
+        <div class="filter-options">
+            <label for="filter">Filter:</label>
+            <select id="filter">
+                <option value="latest">Latest</option>
+                <option value="popular">Most Popular</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+            </select>
         </div>
     </div>
 
-        Image Container
-        <div class="box-container-parent">
-            <div class="box-container">
-                <a href="#" class="box"><img src="/images/download.jpg" alt="Image 1" class="image"></a>
-                <a href="#" class="box"><img src="/images/image (1).jpg" alt="Image 2" class="image"></a>
-                <a href="#" class="box"><img src="/images/image (2).jpg" alt="Image 3" class="image"></a>
-                <a href="#" class="box"><img src="/images/image.jpg" alt="Image 4" class="image"></a>
-                <a href="#" class="box"><img src="/images/image.jpg" alt="Image 5" class="image"></a>
-                <a href="#" class="box"><img src="/images/product-jpeg-250x250.webp" alt="Image 6" class="image"></a>
-                <a href="#" class="box"><img src="/images/product-jpeg-250x250.webp" alt="Image 6" class="image"></a>
-                <a href="#" class="box"><img src="/images/laptop-computer-2516721.webp" alt="Image 6" class="image"></a>
 
+    <div class="charts">
+        <div class="chart-container">
+            <canvas id="usersChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="lostFoundChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="categoryChart"></canvas>
+        </div>
+    </div>
+
+    <div class="box-container-parent">
+        <div class="box-container">
+            <a href="#" class="box"><img src="/images/download.jpg" alt="Image 1" class="image"></a>
+            <a href="#" class="box"><img src="/images/image (1).jpg" alt="Image 2" class="image"></a>
+            <a href="#" class="box"><img src="/images/image (2).jpg" alt="Image 3" class="image"></a>
+            <a href="#" class="box"><img src="/images/image.jpg" alt="Image 4" class="image"></a>
+            <a href="#" class="box"><img src="/images/image.jpg" alt="Image 5" class="image"></a>
+            <a href="#" class="box"><img src="/images/product-jpeg-250x250.webp" alt="Image 6" class="image"></a>
+            <a href="#" class="box"><img src="/images/product-jpeg-250x250.webp" alt="Image 6" class="image"></a>
+            <a href="#" class="box"><img src="/images/laptop-computer-2516721.webp" alt="Image 6" class="image"></a>
+
+        </div>
+    </div>
+    <marquee direction="left">
+
+
+        <h1 class=" note">Lost something? Don't worry you're at the right place!
+
+
+
+        </h1>
+
+    </marquee>
+
+    <!-- Main Grid -->
+    <div class="box-container-main">
+        <div class="box-container-grid">
+            <div class="box-item">
+                <a href="#"> <img src="https://picsum.photos/200?random=1" alt="Cushion covers, bedsheets & more"></a>
+                <p>Cushion covers, bedsheets & more</p>
+            </div>
+            <div class="box-item">
+                <a href="#"> <img src="https://picsum.photos/200?random=2" alt="Figurines, vases & more"></a>
+                <p>Figurines, vases & more</p>
+            </div>
+            <div class="box-item">
+                <a href="#"> <img src="https://picsum.photos/200?random=3" alt="Home storage"></a>
+                <p>Home storage</p>
+            </div>
+            <div class="box-item">
+                <a href="#"> <img src="https://picsum.photos/200?random=4" alt="Lighting solutions"></a>
+                <p>Lighting solutions</p>
             </div>
         </div>
-        <marquee direction="left"  >
-            
+        <a href="items.html" class="explore-all">Explore all</a>
+    </div>
 
-            <h1 class=" note">Lost something? Don't worry you're at the right place!
+    <!-- Secondary Grid -->
+    <div class="box-container-2">
+        <div class="box-container-grid-2">
+            <div class="box-item-2">
+                <a href="#"> <img src="https://picsum.photos/200?random=1" alt="Cushion covers, bedsheets & more"></a>
+                <p>Cushion covers, bedsheets & more</p>
+            </div>
+            <div class="box-item-2">
+                <a href="#"> <img src="https://picsum.photos/200?random=2" alt="Figurines, vases & more"></a>
+                <p>Figurines, vases & more</p>
+            </div>
+            <div class="box-item-2">
+                <a href="#"> <img src="https://picsum.photos/200?random=3" alt="Home storage"></a>
+                <p>Home storage</p>
+            </div>
+            <div class="box-item-2">
+                <a href="#"> <img src="https://picsum.photos/200?random=4" alt="Lighting solutions"></a>
+                <p>Lighting solutions</p>
+            </div>
+        </div>
+        <a href="items.html" class="explore-all">Explore all</a>
+    </div>
 
-            
+    <div class="box-container-3">
+        <div class="box-container-grid-2">
+            <div class="box-item-2">
+                <a href="#"> <img src="https://picsum.photos/200?random=1" alt="Cushion covers, bedsheets & more"></a>
+                <p>Cushion covers, bedsheets & more</p>
+            </div>
+            <div class="box-item-2">
+                <a href="#"> <img src="https://picsum.photos/200?random=2" alt="Figurines, vases & more"></a>
+                <p>Figurines, vases & more</p>
+            </div>
+            <div class="box-item-2">
+                <a href="#"> <img src="https://picsum.photos/200?random=3" alt="Home storage"></a>
+                <p>Home storage</p>
+            </div>
+            <div class="box-item-2">
+                <a href="#"> <img src="https://picsum.photos/200?random=4" alt="Lighting solutions"></a>
+                <p>Lighting solutions</p>
+            </div>
+        </div>
+        <a href="items.html" class="explore-all">Explore all</a>
+    </div>
 
-         </h1>
-
-     </marquee>
-
-     <!-- Main Grid -->
-     <div class="box-container-main">
-         <div class="box-container-grid">
-             <div class="box-item">
-                 <a href="#"> <img src="https://picsum.photos/200?random=1"
-                         alt="Cushion covers, bedsheets & more"></a>
-                 <p>Cushion covers, bedsheets & more</p>
-             </div>
-             <div class="box-item">
-                 <a href="#"> <img src="https://picsum.photos/200?random=2" alt="Figurines, vases & more"></a>
-                 <p>Figurines, vases & more</p>
-             </div>
-             <div class="box-item">
-                 <a href="#"> <img src="https://picsum.photos/200?random=3" alt="Home storage"></a>
-                 <p>Home storage</p>
-             </div>
-             <div class="box-item">
-                 <a href="#"> <img src="https://picsum.photos/200?random=4" alt="Lighting solutions"></a>
-                 <p>Lighting solutions</p>
-             </div>
-         </div>
-         <a href="items.html" class="explore-all">Explore all</a>
-     </div>
-
-     <!-- Secondary Grid -->
-     <div class="box-container-2">
-         <div class="box-container-grid-2">
-             <div class="box-item-2">
-                 <a href="#"> <img src="https://picsum.photos/200?random=1"
-                         alt="Cushion covers, bedsheets & more"></a>
-                 <p>Cushion covers, bedsheets & more</p>
-             </div>
-             <div class="box-item-2">
-                 <a href="#"> <img src="https://picsum.photos/200?random=2" alt="Figurines, vases & more"></a>
-                 <p>Figurines, vases & more</p>
-             </div>
-             <div class="box-item-2">
-                 <a href="#"> <img src="https://picsum.photos/200?random=3" alt="Home storage"></a>
-                 <p>Home storage</p>
-             </div>
-             <div class="box-item-2">
-                 <a href="#"> <img src="https://picsum.photos/200?random=4" alt="Lighting solutions"></a>
-                 <p>Lighting solutions</p>
-             </div>
-         </div>
-         <a href="items.html" class="explore-all">Explore all</a>
-     </div>
-
-     <div class="box-container-3">
-         <div class="box-container-grid-2">
-             <div class="box-item-2">
-                 <a href="#"> <img src="https://picsum.photos/200?random=1"
-                         alt="Cushion covers, bedsheets & more"></a>
-                 <p>Cushion covers, bedsheets & more</p>
-             </div>
-             <div class="box-item-2">
-                 <a href="#"> <img src="https://picsum.photos/200?random=2" alt="Figurines, vases & more"></a>
-                 <p>Figurines, vases & more</p>
-             </div>
-             <div class="box-item-2">
-                 <a href="#"> <img src="https://picsum.photos/200?random=3" alt="Home storage"></a>
-                 <p>Home storage</p>
-             </div>
-             <div class="box-item-2">
-                 <a href="#"> <img src="https://picsum.photos/200?random=4" alt="Lighting solutions"></a>
-                 <p>Lighting solutions</p>
-             </div>
-         </div>
-         <a href="items.html" class="explore-all">Explore all</a>
-     </div>
-
-     <div class="box4-5-container">
+    <div class="box4-5-container">
         <div class="box-container-4">
             <div class="box-container-grid-2">
-   
+
                 <a href="https://paruluniversity.ac.in/"> <img src="/assests/parul_pic_1.jpg" alt="parul"></a>
             </div>
             <a href="https://paruluniversity.ac.in/" class="explore-all">Apply for admission</a>
@@ -204,23 +215,23 @@
                 </div>
             </div>
         </div>
-        
-     </div>
-       
-       
-        
-       
+
+    </div>
+
+
+
+
     </div>
     <footer>
-       
-        
+
+
         <div class="footer-contents">
             <div class="column">
                 <h4>Contact</h4>
                 <p><strong>Address:</strong> 26985 Brighton Lane, Lake Forest, CA 92630 </p>
                 <p><strong>Phone:</strong>+1 505-646-7879</p>
                 <p><strong>Hours:</strong>9:00 - 17:00, Mon - Fri</p>
-    
+
                 <div class="follow">
                     <h4>Follow us</h4>
                     <div class="icons">
@@ -231,14 +242,14 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="column">
                 <h4>About</h4>
                 <a href="">About us</a>
                 <a href="">Privacy Policy</a>
                 <a href="">Terms & Conditions</a>
             </div>
-    
+
             <div class="column">
                 <h4>Your Account</h4>
                 <a href="">Sign In</a>
@@ -247,17 +258,17 @@
                 <a href="">Your Orders</a>
                 <a href="">Help</a>
             </div>
-    
+
             <div class="column install-pay">
 
                 <h4>Install our App </h4>
 
                 <h4>Install our App</h4>
 
-                
+
             </div>
         </div>
-        
+
         <div class="copyright">
 
             <h5>&copy;Sandeep vaishnav & Nihar joshi</h5>
