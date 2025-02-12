@@ -13,114 +13,116 @@
 </head>
 
 <body>
-    <!-- Navigation Bar -->
     <div class="nav_container">
         <div class="nav_bar">
             <img src="/assests/logo.png" alt="Parul University Logo" class="nav_logo">
+            <a href="index.html"><i class="fa fa-home"></i> Home</a>
+            <div class="dropdown">
+                <a href="#"><i class="fa fa-search"></i> Lost & Found </a>
+                <div class="dropdown-menu">
+                    <a href="lost.html">Lost</a>
+                    <a href="items.html"> Founded Items</a>
+                    <a href="lost.html">Found</a>
+                    <a href="#">Report</a>
+                </div>
+            </div>
+            <a href="buy_sell.html"><i class="fa fa-map-marker"></i> Buy & Sell</a>
+            <div class="dropdown">
+                <a href="profile.html"><i class="fa fa-user"></i> Profile</a>
+                <div class="dropdown-menu">
 
-            <div class="nav_links">
-                <a href="index.html"><i class="fa fa-home"></i> Home</a>
-                <div class="dropdown">
-                    <a href="#"><i class="fa fa-search"></i> Lost & Found </a>
-                    <div class="dropdown-menu">
-                        <a href="lost.html">Lost</a>
-                        <a href="items.html"> Founded Items</a>
-                        <a href="lost.html">Found</a>
-                        <a href="#">Report</a>
-                    </div>
+                    <a href="#">Edit Profile</a>
+
                 </div>
-                <a href="buy_sell.html"><i class="fa fa-map-marker"></i> Buy & Sell</a>
-                <div class="dropdown">
-                    <a href="profile.html"><i class="fa fa-user"></i> Profile</a>
-                    <div class="dropdown-menu">
-                        <a href="#">Edit Profile</a>
-                    </div>
+            </div>
+            <div class="dropdown">
+                <a href="login.html" alt="_main"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                <div class="dropdown-menu">
+                    <a href="#">Log Out</a>
+                    <a href="#">Report issue</a>
+
+
                 </div>
-                <div class="dropdown">
-                    <a href="login.html" alt="_main"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
-                    <div class="dropdown-menu">
-                        <a href="#">Log Out</a>
-                        <a href="#">Report issue</a>
+            </div>
+
+        </div>
+    </div>
+    <div class="containerx">
+
+
+        <div class="container">
+            <div class="image-container">
+                <img class="image_login" src="/assests/Login.jpg" alt="Login Illustration">
+                <img class="image_otp" src="/assests/otp.jpg" alt="OTP Illustration" style="display: none;">
+                <img class="image_register" src="/assests/signup.jpg" alt="Register Illustration"
+                    style="display: none;">
+            </div>
+            <div id="form-container">
+                <!-- Login Form -->
+                <form id="login-form">
+                    <h3>Login Here</h3>
+                    <label>Select Role</label>
+                    <div class="radio-group">
+                        <span> <input type="radio" id="student" name="role" value="Student" checked>
+                            <label for="student">Student</label>
+                        </span>
+                        <span>
+                            <input type="radio" id="staff" name="role" value="Staff">
+                            <label for="staff">Staff</label>
+                        </span>
                     </div>
-                </div>
+                    <label for="username">Enrollment or PUMIS ID</label>
+                    <input type="text" placeholder="Enter your ID" id="username">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Password" id="password">
+                    <button type="button">Log In</button>
+                    <p>Don't have an account? <span class="toggle-form" onclick="toggleForm('email-form')"
+                            style="cursor: pointer;">Register</span></p>
+                </form>
+
+                <!-- Email Form (Registration Step 1) -->
+                <form id="email-form" style="display: none;">
+                    <h3>Enter Your Email</h3>
+                    <input type="email" placeholder="Enter your Parul ID" id="email">
+                    <button type="button" onclick="showOtpForm()">Send OTP</button>
+                    <p>Or login with <button class="google-btn"><i class="fab fa-google"></i> Google</button></p>
+                    <p class="note">(Only use your Parul ID)</p>
+                </form>
+
+                <!-- OTP Form (Registration Step 2) -->
+                <form id="otp-form" style="display: none;">
+                    <h3>Enter OTP</h3>
+                    <input type="text" placeholder="Enter 4-digit OTP" id="otp" maxlength="4">
+                    <button type="button" onclick="showRegisterForm()">Submit</button>
+                </form>
+
+                <!-- Registration Form (Final Step) -->
+                <form id="register-form" style="display: none;" onsubmit="redirectToProfile(event)">
+                    <h3>Complete Registration</h3>
+                    <label>Select Role</label>
+
+                    <div class="role-container">
+                        <label class="checkbox-btn" onclick="toggleCheckbox(this)">
+                            <input type="checkbox">
+                            <button type="button"><i class="fa-solid fa-pencil"></i> Student</button>
+                        </label>
+                        <label class="checkbox-btn" onclick="toggleCheckbox(this)">
+                            <input type="checkbox">
+                            <button type="button"><i class="fa-solid fa-pencil"></i> Staff</button>
+                        </label>
+                    </div>
+
+                    <input type="text" placeholder="Full Name" id="name" required>
+                    <input type="text" placeholder="MIS ID" id="mis" required>
+                    <input type="text" placeholder="Phone Number" id="phone" required>
+                    <input type="password" placeholder="Create Password" id="password" required>
+                    <input type="password" placeholder="Confirm Password" id="confirm-password" required>
+
+                    <button type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
+                </form>
             </div>
         </div>
     </div>
-
-
-
-    <div class="container">
-        <div class="image-container">
-            <img class="image_login" src="/assests/Login.jpg" alt="Login Illustration">
-            <img class="image_otp" src="/assests/otp.jpg" alt="OTP Illustration" style="display: none;">
-            <img class="image_register" src="/assests/signup.jpg" alt="Register Illustration" style="display: none;">
-        </div>
-        <div id="form-container">
-            <!-- Login Form -->
-            <form id="login-form">
-                <h3>Login Here</h3>
-                <label>Select Role</label>
-                <div class="radio-group">
-                    <span> <input type="radio" id="student" name="role" value="Student" checked>
-                        <label for="student">Student</label>
-                    </span>
-                    <span>
-                        <input type="radio" id="staff" name="role" value="Staff">
-                        <label for="staff">Staff</label>
-                    </span>
-                </div>
-                <label for="username">Enrollment or PUMIS ID</label>
-                <input type="text" placeholder="Enter your ID" id="username">
-                <label for="password">Password</label>
-                <input type="password" placeholder="Password" id="password">
-                <button type="button">Log In</button>
-                <p>Don't have an account? <span class="toggle-form" onclick="toggleForm('email-form')"
-                        style="cursor: pointer;">Register</span></p>
-            </form>
-
-            <!-- Email Form (Registration Step 1) -->
-            <form id="email-form" style="display: none;">
-                <h3>Enter Your Email</h3>
-                <input type="email" placeholder="Enter your Parul ID" id="email">
-                <button type="button" onclick="showOtpForm()">Send OTP</button>
-                <p>Or login with <button class="google-btn"><i class="fab fa-google"></i> Google</button></p>
-                <p class="note">(Only use your Parul ID)</p>
-            </form>
-
-            <!-- OTP Form (Registration Step 2) -->
-            <form id="otp-form" style="display: none;">
-                <h3>Enter OTP</h3>
-                <input type="text" placeholder="Enter 4-digit OTP" id="otp" maxlength="4">
-                <button type="button" onclick="showRegisterForm()">Submit</button>
-            </form>
-
-            <!-- Registration Form (Final Step) -->
-            <form id="register-form" style="display: none;" onsubmit="redirectToProfile(event)">
-                <h3>Complete Registration</h3>
-                <label>Select Role</label>
-
-                <div class="role-container">
-                    <label class="checkbox-btn" onclick="toggleCheckbox(this)">
-                        <input type="checkbox">
-                        <button type="button"><i class="fa-solid fa-pencil"></i> Student</button>
-                    </label>
-                    <label class="checkbox-btn" onclick="toggleCheckbox(this)">
-                        <input type="checkbox">
-                        <button type="button"><i class="fa-solid fa-pencil"></i> Staff</button>
-                    </label>
-                </div>
-
-                <input type="text" placeholder="Full Name" id="name" required>
-                <input type="text" placeholder="MIS ID" id="mis" required>
-                <input type="text" placeholder="Phone Number" id="phone" required>
-                <input type="password" placeholder="Create Password" id="password" required>
-                <input type="password" placeholder="Confirm Password" id="confirm-password" required>
-
-                <button type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
-            </form>
-        </div>
-    </div>
-
 
 
 </body>
