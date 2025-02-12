@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         data: {
             labels: ['Electronics', 'Clothing', 'Books', 'Documents', 'Accessories'],
             datasets: [{
-                data: [50, 30, 40, 20, 60],
+                data: [50, 30, 40, 20, 10],
                 backgroundColor: ['#ff5733', '#33ff57', '#3357ff', '#ff33a1', '#f39c12']
             }]
         },
