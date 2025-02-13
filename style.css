@@ -1,5 +1,5 @@
 /* General Reset */
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap');
 body,
 html {
     margin: 0;
@@ -23,7 +23,7 @@ html {
     height: 80px;
     padding: 0 20px;
     background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px -1px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     width: 100%;
@@ -153,6 +153,84 @@ canvas {
     height: 100%;
 }
 
+/*new div for the vector*/
+
+
+.vector-main {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.vector-div {
+    width: 90%;
+    max-width: 1400px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    overflow: hidden;
+    padding: 40px;
+    gap: 50px;
+}
+
+.image-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.feature-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.feature-image:hover {
+    transform: scale(1.02);
+}
+
+.content-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.main-title {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 10px;
+   
+    
+}
+
+.service-section {
+    margin-bottom: 20px;
+}
+
+.service-title {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+.service-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #596777;
+    margin-bottom: 15px;
+}
+
 /* Image Box Container */
 .box-container {
     display: flex;
@@ -180,7 +258,10 @@ canvas {
 .box:hover {
     transform: scale(1.1);
 }
-
+.box-contaoner-main-all{
+    display: flex;
+    justify-content: center;
+}
 /* Main Content Containers */
 .box-container-main {
     background: linear-gradient(to bottom, #fff, #f5f5f5);
@@ -191,7 +272,8 @@ canvas {
     max-width: 480px;
     margin: -15px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    float: left;
+   
+    
 
 }
 
@@ -204,8 +286,7 @@ canvas {
     max-width: 480px;
     margin: -15px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    float: right;
-
+    
 
 }
 
@@ -218,7 +299,7 @@ canvas {
     max-width: 480px;
     margin: -15px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    float: none;
+   
 
 
 }
@@ -410,8 +491,33 @@ canvas {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 footer {
     padding: 5rem;
+    background-color: 	#20263e;
+    color: white
 
 }
 

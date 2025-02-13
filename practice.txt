@@ -166,3 +166,19 @@ footer .section1 {
         height: auto;
     }
 }
+
+
+
+<!-- <div class="box-container-parent">
+        <div class="box-container">
+            <a href="#" class="box"><img src="/images/download.jpg" alt="Image 1" class="image"></a>
+            <a href="#" class="box"><img src="/images/image (1).jpg" alt="Image 2" class="image"></a>
+            <a href="#" class="box"><img src="/images/image (2).jpg" alt="Image 3" class="image"></a>
+            <a href="#" class="box"><img src="/images/image.jpg" alt="Image 4" class="image"></a>
+            <a href="#" class="box"><img src="/images/image.jpg" alt="Image 5" class="image"></a>
+            <a href="#" class="box"><img src="/images/product-jpeg-250x250.webp" alt="Image 6" class="image"></a>
+            <a href="#" class="box"><img src="/images/product-jpeg-250x250.webp" alt="Image 6" class="image"></a>
+            <a href="#" class="box"><img src="/images/laptop-computer-2516721.webp" alt="Image 6" class="image"></a>
+
+        </div>
+    </div> -->

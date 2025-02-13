@@ -323,4 +323,69 @@ document.addEventListener("DOMContentLoaded", () => {
         ease: "back.out(1.7)"
     });
 
+    const vectorTimeline = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".vector-main",
+            start: "top center",
+            end: "bottom center",
+            toggleActions: "play none none reverse"
+        }
+    });
+
+    // Add animations to the timeline
+    vectorTimeline
+        // Animate the image
+        .from(".image-section", {
+            x: -100,
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out"
+        })
+        // Animate the main title
+        .from(".main-title", {
+            y: 30,
+            opacity: 0,
+            duration: 0.8,
+            ease: "back.out(1.7)"
+        }, "-=0.5")
+        // Animate service sections
+        .from(".service-section", {
+            y: 40,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "power2.out"
+        }, "-=0.3");
+
+    // Add hover animations for service sections
+    gsap.utils.toArray(".service-section").forEach(section => {
+        gsap.to(section, {
+            scrollTrigger: {
+                trigger: section,
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+            },
+            duration: 0.3,
+            scale: 1,
+            opacity: 1
+        });
+
+        // Hover effect
+        section.addEventListener("mouseenter", () => {
+            gsap.to(section, {
+                scale: 1.02,
+                duration: 0.3,
+                ease: "power2.out"
+            });
+        });
+
+        section.addEventListener("mouseleave", () => {
+            gsap.to(section, {
+                scale: 1,
+                duration: 0.3,
+                ease: "power2.out"
+            });
+        });
+
+    });
 });
