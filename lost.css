@@ -1,5 +1,7 @@
+Lost.css
 /* General Reset */
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
@@ -32,13 +34,15 @@ body, html {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-left: 600px; /* Pushes the links to the right */
+    margin-left: 600px;
+    /* Pushes the links to the right */
 }
 
 .nav_links a {
     text-decoration: none;
     color: black;
-    font-size: 14px; /* Smaller font size */
+    font-size: 14px;
+    /* Smaller font size */
     font-weight: bold;
     transition: all 0.3s ease;
     padding: 10px 15px;
@@ -62,10 +66,13 @@ body, html {
     color: black;
 }
 
+
 /* Toggle Buttons */
 .toggle-container {
-    text-align: center;
-    margin: 20px 0;
+    margin: 100px 0 20px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .toggle-container button {
@@ -90,13 +97,19 @@ body, html {
     background-color: #0056b3;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
+
 h2 {
-    text-align: center; /* Centers the text horizontally */
-    margin: 0; /* Removes any default margins */
-    line-height: 80px; /* Matches the height of the container for vertical centering */
-    font-size: 24px; /* Adjust font size as needed */
+    text-align: center;
+    /* Centers the text horizontally */
+    margin: 0;
+    /* Removes any default margins */
+    line-height: 80px;
+    /* Matches the height of the container for vertical centering */
+    font-size: 24px;
+    /* Adjust font size as needed */
     font-weight: bold;
-    color: #333; /* Adjust color as needed */
+    color: #333;
+    /* Adjust color as needed */
 }
 
 /* Forms Wrapper */
@@ -172,6 +185,7 @@ form button:hover {
         padding: 8px 15px;
     }
 }
+
 /* Calendar Styles */
 .calendar-wrapper {
     text-align: center;
@@ -206,13 +220,15 @@ form button:hover {
     border-color: #007BFF;
     box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
 }
-#calander{
+
+#calander {
     text-align: left;
     font-size: 16px;
     line-height: 14px;
     margin-top: -4px;
 }
-.star{
+
+.star {
     color: red;
     font-size: 15px;
 }
@@ -234,7 +250,8 @@ form button:hover {
     opacity: 0;
     transform: translateY(-10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
-    z-index: 1000; /* Ensures it stays on top */
+    z-index: 1000;
+    /* Ensures it stays on top */
 }
 
 /* Show dropdown menu when hovering over the parent */
@@ -256,5 +273,3 @@ form button:hover {
 .dropdown-menu a:hover {
     background: #ddd;
 }
-
-

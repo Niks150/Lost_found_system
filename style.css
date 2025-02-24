@@ -1,3 +1,5 @@
+
+
 /* General Reset */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap');
 body,
@@ -6,7 +8,7 @@ html {
     padding: 0;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
-    background-color: #FFFDF2;
+    background-color: #f7f9fc;
     height: 100vh;
 
 }
@@ -22,7 +24,7 @@ html {
     align-items: center;
     height: 80px;
     padding: 0 20px;
-    background-color: white;
+    background-color: #ffffff;
     box-shadow: 0 4px -1px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
@@ -79,7 +81,7 @@ html {
     margin-top: 75px;
     align-items: center;
     padding: 20px 20px;
-    background-color: #f9f9f9;
+    background-color: #f0f4f8;
     border-top: 1px solid #ddd;
     position: relative;
     z-index: 999;
@@ -130,9 +132,9 @@ html {
 
 
 
-/*charts*/
+
 .charts {
-    background-color: rgba(255, 255, 255, 0.391);
+    background-color: #ffffff;
     display: flex;
     justify-content: space-around;
     gap: 119px;
@@ -153,11 +155,11 @@ canvas {
     height: 100%;
 }
 
-/*new div for the vector*/
+
 
 
 .vector-main {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, #e6eef8 0%, #f5f7fa 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -264,7 +266,7 @@ canvas {
 }
 /* Main Content Containers */
 .box-container-main {
-    background: linear-gradient(to bottom, #fff, #f5f5f5);
+    background: linear-gradient(to bottom, #ffffff, #f8fafd);
     padding: 20px;
     text-align: center;
     border: 1px solid #ddd;
@@ -278,7 +280,7 @@ canvas {
 }
 
 .box-container-2 {
-    background: linear-gradient(to bottom, #fff, #f5f5f5);
+    background: linear-gradient(to bottom, #ffffff, #f8fafd);
     padding: 20px;
     text-align: center;
     border: 1px solid #ddd;
@@ -291,7 +293,7 @@ canvas {
 }
 
 .box-container-3 {
-    background: linear-gradient(to bottom, #fff, #f5f5f5);
+    background: linear-gradient(to bottom, #ffffff, #f8fafd);
     padding: 20px;
     text-align: center;
     border: 1px solid #ddd;
@@ -310,7 +312,7 @@ canvas {
 }
 
 .box-container-4 {
-    background: linear-gradient(to bottom, #fff, #f5f5f5);
+    background: linear-gradient(to bottom, #ffffff, #f8fafd);
     padding: 14px;
     text-align: center;
     border: 1px solid #ddd;
@@ -324,7 +326,7 @@ canvas {
 }
 
 .box-container-5 {
-    background: linear-gradient(to bottom, #fff, #f5f5f5);
+    background: linear-gradient(to bottom, #ffffff, #f8fafd);
     padding: 14px;
     text-align: center;
     border: 1px solid #ddd;
@@ -338,7 +340,7 @@ canvas {
 }
 
 .box-container-6 {
-    background: linear-gradient(to bottom, #fff, #f5f5f5);
+    background: linear-gradient(to bottom, #ffffff, #f8fafd);
     padding: 14px;
     text-align: center;
     border: 1px solid #ddd;
@@ -401,7 +403,6 @@ canvas {
     text-decoration: underline;
 }
 
-/*marqueee*/
 
 .note {
     font-size: 25px;
@@ -422,7 +423,7 @@ canvas {
     display: flex;
     justify-content: space-around;
     padding: 50px 20px;
-    background: #f8f9fa;
+    background-color: #edf2f7;
     margin: 40px 0;
 }
 
@@ -446,7 +447,7 @@ canvas {
     display: flex;
     justify-content: space-around;
     padding: 50px 20px;
-    background: linear-gradient(135deg, #007bff, #00ff88);
+    background: linear-gradient(135deg, #2c5282 0%, #3182ce 100%);
     color: white;
     margin: 40px 0;
 }
@@ -464,7 +465,7 @@ canvas {
 /* Testimonials */
 .testimonials-container {
     padding: 50px 20px;
-    background: #ffffff;
+    background-color: #ffffff;
     margin: 40px 0;
     text-align: center;
 }
@@ -516,7 +517,7 @@ canvas {
 
 footer {
     padding: 5rem;
-    background-color: 	#20263e;
+    background-color: #1a202c;
     color: white
 
 }
@@ -638,4 +639,185 @@ footer .copyright h5 {
 
 .dropdown-menu a:hover {
     background: #ddd;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .nav_links {
+        margin-left: 300px;
+    }
+
+    .vector-div {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .features-container {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .feature-box {
+        width: calc(50% - 40px);
+    }
+
+    .box-container-grid,
+    .box-container-grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Medium Devices (less than 992px) */
+@media screen and (max-width: 992px) {
+    .nav_links {
+        margin-left: 100px;
+    }
+
+    .filter-bar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .charts {
+        gap: 40px;
+    }
+
+    .chart-container {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .box-container-main,
+    .box-container-2,
+    .box-container-3 {
+        max-width: 90%;
+    }
+
+    .box4-5-container {
+        flex-direction: column;
+    }
+
+    .footer-contents {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .column {
+        width: calc(50% - 15px);
+    }
+}
+
+/* Small Devices (less than 768px) */
+@media screen and (max-width: 768px) {
+    .nav_bar {
+        padding: 0 10px;
+    }
+
+    .nav_links {
+        margin-left: 20px;
+        gap: 10px;
+    }
+
+    .nav_links a {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .filter-search input {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .feature-box {
+        width: 100%;
+    }
+
+    .stat-box {
+        margin-bottom: 20px;
+    }
+
+    .box {
+        width: 150px;
+        height: 140px;
+    }
+
+    .box-container-grid,
+    .box-container-grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Extra Small Devices (less than 576px) */
+@media screen and (max-width: 576px) {
+    .nav_bar {
+        height: 60px;
+    }
+
+    .nav_logo {
+        height: 30px;
+    }
+
+    .nav_links {
+        display: none; /* Consider adding a mobile menu button */
+    }
+
+    .filter-bar {
+        margin-top: 60px;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .service-title {
+        font-size: 1.5rem;
+    }
+
+    .box-container {
+        gap: 5px;
+    }
+
+    .box {
+        width: 130px;
+        height: 120px;
+    }
+
+    .footer {
+        padding: 3rem;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .install-pay .pay {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Fix for very small devices (less than 375px) */
+@media screen and (max-width: 375px) {
+    .box {
+        width: 100%;
+        height: auto;
+    }
+
+    .filter-search input {
+        max-width: 200px;
+    }
+
+    .feature-icon {
+        font-size: 30px;
+    }
+
+    .stat-number {
+        font-size: 36px;
+    }
 }
