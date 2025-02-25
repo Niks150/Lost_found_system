@@ -34,15 +34,13 @@ html {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-left: 600px;
-    /* Pushes the links to the right */
+    margin-left: 600px; /* Pushes the links to the right */
 }
 
 .nav_links a {
     text-decoration: none;
     color: black;
-    font-size: 14px;
-    /* Smaller font size */
+    font-size: 14px; /* Smaller font size */
     font-weight: bold;
     transition: all 0.3s ease;
     padding: 10px 15px;

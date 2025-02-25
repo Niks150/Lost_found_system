@@ -128,26 +128,29 @@ html {
     background-color: #0056b3;
 }
 
-
-
-
-
-
 .charts {
-    background-color: #ffffff;
     display: flex;
     justify-content: space-around;
-    gap: 119px;
     flex-wrap: wrap;
-   
+    gap: 30px;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e6eef8 100%);
 }
 
 .chart-container {
-    width: 418px;
-    height: 250px;
+    width: 380px;
+    height: 300px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    padding: 20px;
     position: relative;
-    justify-content: center;
-    display: flex;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chart-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
 }
 
 canvas {
