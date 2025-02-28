@@ -270,49 +270,32 @@ form button:hover {
 }
 
 .google-btn {
-    background-color: #db4437;
-    color: white;
-    display: flex;
-    gap: 6.25rem;
-    padding: 8px;
-    border-radius: 5px;
+    width: 100%;
+    background-color: #f1f3f4;
+    color: #424242;
+    padding: 15px;
     border: none;
+    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-    margin-top: 10px;
-    font-size: 14px;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.google-btn:hover {
+    background-color: #e8eaed;
+}
+
+.google-icon {
+    margin-right: 10px;
+    height: 18px;
 }
 
 .role-container {
     display: flex;
     gap: 35px;
     /* Adjust spacing between buttons */
-}
-
-.checkbox-btn {
-    display: flex;
-    align-items: end;
-    gap: 2px;
-    height: 2.25rem;
-    width: 7.25rem;
-    background-color: #fff;
-    cursor: pointer;
-    padding: 4px 6px;
-    font-size: 16px;
-    transition: background-color 0.3s, border-color 0.3s;
-}
-
-.checkbox-btn input {
-    display: none;
-}
-
-.checkbox-btn::after{
-    background-color: blue;
-}
-
-
-.checkbox-btn:active {
-    background-color: #007bff;
-    border-color: #007bff;
-    color: white;
 }
