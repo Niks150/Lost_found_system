@@ -15,7 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden;
+    
 }
 
 /* Navigation Bar Container */
@@ -206,7 +206,9 @@ form h3 {
     text-align: center;
     margin-bottom: 20px;
 }
-
+.forgot-password{
+    font-size: 10px;
+}
 form label {
     margin-top: 15px;
 
@@ -271,8 +273,9 @@ form button:hover {
 
 .google-btn {
     width: 100%;
-    background-color: #f1f3f4;
-    color: #424242;
+
+    background: transparent;
+    margin-top: 10px;
     padding: 15px;
     border: none;
     border-radius: 5px;
@@ -282,7 +285,7 @@ form button:hover {
     align-items: center;
     justify-content: center;
     font-weight: 500;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3sease;
 }
 
 .google-btn:hover {
