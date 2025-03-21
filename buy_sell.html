@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Buy & Sell Page</title>
+  <script src="https://kit.fontawesome.com/3ec8f51ae6.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="buy_sell.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
     crossorigin="anonymous"></script>
@@ -72,43 +73,188 @@
     </script>
   </div>
   <!-- Floating Plus Button -->
+
+
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Floating Button -->
   <button class="floating-btn" onclick="togglePostAd()">
     <i class="fas fa-plus"></i> Sell
   </button>
 
+  <!-- Ad Posting Form Container -->
+  <div class="container" id="adContainer">
+    <button class="close-btn" onclick="togglePostAd()">
+      <i class="fas fa-times"></i>
+    </button>
 
+    <h1>POST YOUR AD</h1>
 
+    <div class="category-header">CHOOSE A CATEGORY</div>
 
-<div class="post-ad-container" id="postAdContainer">
-  <span class="close-btn" onclick="togglePostAd()">✖</span>
-  <div class="post-ad-header">
-      <h1>POST YOUR AD</h1>
+    <div class="category-wrapper">
+      <ul class="category-list">
+        <li class="category-item" data-category="cars">
+          <div class="category-main">
+            <div class="category-icon"><i class="fa-solid fa-car"></i></div>
+            <div class="category-name">Cars</div>
+            <div class="category-arrow">›</div>
+          </div>
+          <ul class="subcategories-container">
+            <li class="subcategory-item">New Cars</li>
+            <li class="subcategory-item">Used Cars</li>
+            <li class="subcategory-item">Car Parts</li>
+          </ul>
+        </li>
+
+        <li class="category-item" data-category="properties">
+          <div class="category-main">
+            <div class="category-icon"><i class="fa-solid fa-building"></i></div>
+            <div class="category-name">Properties</div>
+            <div class="category-arrow">›</div>
+          </div>
+          <ul class="subcategories-container">
+            <li class="subcategory-item">For Sale</li>
+            <li class="subcategory-item">For Rent</li>
+            <li class="subcategory-item">PG & Roommates</li>
+          </ul>
+        </li>
+
+        <li class="category-item" data-category="mobiles">
+          <div class="category-main">
+            <div class="category-icon"><i class="fa-solid fa-mobile-alt"></i></div>
+            <div class="category-name">Mobiles</div>
+            <div class="category-arrow">›</div>
+          </div>
+          <ul class="subcategories-container">
+            <li class="subcategory-item">Mobile Phones</li>
+            <li class="subcategory-item">Accessories</li>
+            <li class="subcategory-item">Tablets</li>
+          </ul>
+        </li>
+
+        <li class="category-item" data-category="jobs">
+          <div class="category-main">
+            <div class="category-icon"><i class="fa-solid fa-briefcase"></i></div>
+            <div class="category-name">Jobs</div>
+            <div class="category-arrow">›</div>
+          </div>
+          <ul class="subcategories-container">
+            <li class="subcategory-item">Full Time</li>
+            <li class="subcategory-item">Part Time</li>
+            <li class="subcategory-item">Work from Home</li>
+          </ul>
+        </li>
+
+        <li class="category-item" data-category="bikes">
+          <div class="category-main">
+            <div class="category-icon"><i class="fa-solid fa-motorcycle"></i></div>
+            <div class="category-name">Bikes</div>
+            <div class="category-arrow">›</div>
+          </div>
+          <ul class="subcategories-container">
+            <li class="subcategory-item">Motorcycles</li>
+            <li class="subcategory-item">Scooters</li>
+            <li class="subcategory-item">Bicycles</li>
+          </ul>
+        </li>
+
+        <li class="category-item" data-category="electronics">
+          <div class="category-main">
+            <div class="category-icon"><i class="fa-solid fa-laptop"></i></div>
+            <div class="category-name">Electronics & Appliances</div>
+            <div class="category-arrow">›</div>
+          </div>
+          <ul class="subcategories-container">
+            <li class="subcategory-item">TVs</li>
+            <li class="subcategory-item">Laptops</li>
+            <li class="subcategory-item">Refrigerators</li>
+          </ul>
+        </li>
+
+        <li class="category-item" data-category="commercialVehicles">
+          <div class="category-main">
+            <div class="category-icon"><i class="fa-solid fa-truck"></i></div>
+            <div class="category-name">Commercial Vehicles & Spares</div>
+            <div class="category-arrow">›</div>
+          </div>
+          <ul class="subcategories-container">
+            <li class="subcategory-item">Commercial Vehicles</li>
+            <li class="subcategory-item">Spare Parts</li>
+          </ul>
+        </li>
+
+        <li class="category-item" data-category="furniture">
+          <div class="category-main">
+            <div class="category-icon"><i class="fa-solid fa-chair"></i></div>
+            <div class="category-name">Furniture</div>
+            <div class="category-arrow">›</div>
+          </div>
+          <ul class="subcategories-container">
+            <li class="subcategory-item">Home Furniture</li>
+            <li class="subcategory-item">Office Furniture</li>
+          </ul>
+        </li>
+
+        <li class="category-item" data-category="fashion">
+          <div class="category-main">
+            <div class="category-icon"><i class="fa-solid fa-tshirt"></i></div>
+            <div class="category-name">Fashion</div>
+            <div class="category-arrow">›</div>
+          </div>
+          <ul class="subcategories-container">
+            <li class="subcategory-item">Men</li>
+            <li class="subcategory-item">Women</li>
+            <li class="subcategory-item">Kids</li>
+          </ul>
+        </li>
+
+        <li class="category-item" data-category="books">
+          <div class="category-main">
+            <div class="category-icon"><i class="fa-solid fa-book"></i></div>
+            <div class="category-name">Books, Sports & Hobbies</div>
+            <div class="category-arrow">›</div>
+          </div>
+          <ul class="subcategories-container">
+            <li class="subcategory-item">Books</li>
+            <li class="subcategory-item">Sports Equipment</li>
+            <li class="subcategory-item">Hobby Items</li>
+          </ul>
+        </li>
+
+        <li class="category-item" data-category="pets">
+          <div class="category-main">
+            <div class="category-icon"><i class="fa-solid fa-paw"></i></div>
+            <div class="category-name">Pets</div>
+            <div class="category-arrow">›</div>
+          </div>
+          <ul class="subcategories-container">
+            <li class="subcategory-item">Dogs</li>
+            <li class="subcategory-item">Cats</li>
+            <li class="subcategory-item">Accessories</li>
+          </ul>
+        </li>
+
+        <li class="category-item" data-category="services">
+          <div class="category-main">
+            <div class="category-icon"><i class="fa-solid fa-cogs"></i></div>
+            <div class="category-name">Services</div>
+            <div class="category-arrow">›</div>
+          </div>
+          <ul class="subcategories-container">
+            <li class="subcategory-item">Home Services</li>
+            <li class="subcategory-item">Professional Services</li>
+            <li class="subcategory-item">Education</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </div>
-  <div class="category-header">
-      CHOOSE A CATEGORY
-  </div>
-  <ul class="category-list">
-      <li class="category-item">
-          <a href="#" class="category-link">
-              <span class="category-icon">🚗</span>
-              <span class="category-name">Cars</span>
-              <span class="category-arrow">›</span>
-          </a>
-      </li>
-      <li class="category-item">
-          <a href="#" class="category-link">
-              <span class="category-icon">🏠</span>
-              <span class="category-name">Properties</span>
-              <span class="category-arrow">›</span>
-          </a>
-      </li>
-  </ul>
-</div>
 
 
 
 
- <script src="buy_sell.css"></script>
+  <script src="buy.js"></script>
 
 </body>
 

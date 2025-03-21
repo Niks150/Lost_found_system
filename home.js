@@ -389,3 +389,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 });
+function toggleMenu() {
+    document.querySelector('.hamburger').classList.toggle('open');
+    document.getElementById('sideNav').classList.toggle('open');
+}
+
+function toggleDropdown(element) {
+    element.parentElement.classList.toggle('active');
+    // Prevent the default behavior
+    event.preventDefault();
+}
+
+// Function to check if the screen is mobile size and update the menu
+function checkScreenSize() {
+    const mobileBreakpoint = 768;
+    if (window.innerWidth <= mobileBreakpoint) {
+        // Mobile view - hamburger is already shown by CSS
+    } else {
+        // Desktop view - make sure side nav is closed
+        document.getElementById('sideNav').classList.remove('open');
+        document.querySelector('.hamburger').classList.remove('open');
+    }
+}
+
+// Check screen size on load
+window.addEventListener('load', checkScreenSize);
+// Check screen size on resize
+window.addEventListener('resize', checkScreenSize);
