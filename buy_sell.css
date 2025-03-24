@@ -102,7 +102,7 @@ html {
 /* Grid Container: Reduced min-width and gap for a denser grid */
 .scrollable-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Reduced min width from 220px to 180px */
+  grid-template-columns: repeat(auto-fill, minmax(138px, 1fr)); /* Reduced min width from 220px to 180px */
   gap: 33px;  /* Reduced gap between boxes */
   padding: 20px;
   margin-top: 85px;
@@ -121,10 +121,7 @@ html {
   cursor: pointer;
 }
 
-.box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
+
 
 /* Adjusted Image Styling: Image will scale to 100% of the box width */
 .box img {
