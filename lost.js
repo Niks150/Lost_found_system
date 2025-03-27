@@ -21,10 +21,9 @@ toggleFound.addEventListener('click', () => {
 
 /*for date*/
 flatpickr("#calendar", {
-    dateFormat: "Y-m-d",
-    // Disable past dates
+  dateFormat: "Y-m-d",
+  maxDate: "today", // Restrict to past and present dates
 });
-//hello
 
 document.getElementById("found-item-form").addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent default form submission behavior

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Lost and Found & Buy and Sell</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin_panel.css">
+    <script src="login.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Admin Panel</h2>
+            </div>
+            <div class="sidebar-menu">
+                <ul>
+                    <li><a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-search"></i> Lost Items</a></li>
+                    <li><a href="#"><i class="fas fa-check-circle"></i> Found Items</a></li>
+                    <li><a href="#"><i class="fas fa-shopping-cart"></i> Buy & Sell</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> Users</a></li>
+                    <li><a href="#"><i class="fas fa-chart-bar"></i> Reports</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                    <li><a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <h1>Dashboard</h1>
+                <div class="user-info">
+                    <img src="/api/placeholder/40/40" alt="Admin Avatar">
+                    <span>Admin User</span>
+                </div>
+            </div>
+
+            <!-- Dashboard Cards -->
+            <div class="dashboard-cards">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Total Lost Items</h3>
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h2>24</h2>
+                    <p>7 new this week</p>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Total Found Items</h3>
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2>18</h2>
+                    <p>5 new this week</p>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Items For Sale</h3>
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h2>32</h2>
+                    <p>12 new this week</p>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Registered Users</h3>
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h2>127</h2>
+                    <p>15 new this week</p>
+                </div>
+            </div>
+
+            <!-- Recent Items Table -->
+            <div class="table-container">
+                <h2 style="margin-bottom: 15px;">Recent Lost Items</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Item</th>
+                            <th>Location</th>
+                            <th>Date</th>
+                            <th>Reported By</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#001</td>
+                            <td>Blue Backpack</td>
+                            <td>Library, 2nd Floor</td>
+                            <td>Mar 22, 2025</td>
+                            <td>John Smith</td>
+                            <td>Pending</td>
+                            <td>
+                                <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#002</td>
+                            <td>Student ID Card</td>
+                            <td>Cafeteria</td>
+                            <td>Mar 21, 2025</td>
+                            <td>Sarah Johnson</td>
+                            <td>Under Review</td>
+                            <td>
+                                <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#003</td>
+                            <td>Wireless Earbuds</td>
+                            <td>Gym</td>
+                            <td>Mar 20, 2025</td>
+                            <td>Michael Brown</td>
+                            <td>Found</td>
+                            <td>
+                                <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#004</td>
+                            <td>Mathematics Textbook</td>
+                            <td>Lecture Hall B</td>
+                            <td>Mar 19, 2025</td>
+                            <td>Emily Davis</td>
+                            <td>Pending</td>
+                            <td>
+                                <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                                <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>
