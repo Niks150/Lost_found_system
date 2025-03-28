@@ -519,9 +519,10 @@ canvas {
 
 
 footer {
-    padding: 5rem;
+    margin-top: 4.5rem;
+    padding: 2rem;
     background-color: #1a202c;
-    color: white
+    color: white;
 
 }
 
