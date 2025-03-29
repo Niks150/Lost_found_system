@@ -520,7 +520,7 @@ canvas {
 
 footer {
     margin-top: 4.5rem;
-    padding: 2rem;
+    padding: 4rem;
     background-color: #1a202c;
     color: white;
 
@@ -824,4 +824,8 @@ footer .copyright h5 {
     .stat-number {
         font-size: 36px;
     }
+}
+.team{
+    display: flex;
+    justify-content: center;
 }
