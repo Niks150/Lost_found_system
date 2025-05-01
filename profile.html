@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
     <link rel="stylesheet" href="profile.css">
-    <script src="https://kit.fontawesome.com/3ec8f51ae6.js" crossorigin="anonymous"></script>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/3ec8f51ae6.js" crossorigin="anonymous"></script>
-    <title>Profile</title>
+    <title>Profile | Parul University</title>
 </head>
 
 <body>
@@ -18,18 +20,24 @@
         <div class="nav_bar">
             <img src="/assests/logo.png" alt="Parul University Logo" class="nav_logo">
             
-            <div class="nav_links">
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="nav_links" id="nav_links">
                 <a href="index.html"><i class="fa fa-home"></i> Home</a>
                 <div class="dropdown">
-                    <a href="#"><i class="fa fa-search"></i> Lost & Found </a>
+                    <a href="#" class="dropdown-toggle"><i class="fa fa-search"></i> Lost & Found </a>
                     <div class="dropdown-menu">
                         <a href="lost.html">Lost</a>
-                        <a href="items.html"> Founded Items</a>
+                        <a href="items.html">Founded Items</a>
                         <a href="lost.html">Found</a>
                         <a href="#">Report</a>
                     </div>
                 </div>
-                <a href="buy_sell.html"><i class="fa fa-map-marker"></i> Buy & Sell</a>
+                <a href="buy_sell.html"><i class="fa fa-shopping-cart"></i> Buy & Sell</a>
                 <div class="dropdown">
                     <a href="profile.html"><i class="fa fa-user"></i> Profile</a>
                     <div class="dropdown-menu">
@@ -37,7 +45,7 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <a href="login.html" alt="_main"><i class="fa-solid fa-right-to-bracket"></i>  Login</a>
+                    <a href="login.html" alt="_main"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
                     <div class="dropdown-menu">
                         <a href="#">Log Out</a>             
                         <a href="#">Report issue</a>
@@ -46,67 +54,58 @@
             </div>
         </div>  
     </div>
+    
     <div class="container emp-profile">
         <form method="post">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="profile-img">
-                        <img src="/assests/profile.jpg"
-                            alt="" />
-
-                        <br>
-                        <br>
-                        <br>
+                    <div class="profile-img fade-in">
+                        <img src="/assests/profile.jpg" alt="Profile Picture" />
                         <div class="file btn btn-lg btn-primary">
                             Change Photo
-                            <input type="file" name="file" >
+                            <input type="file" name="file">
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="profile-head">
+                    <div class="profile-head fade-in delay-1">
                         <h5>
                             <b>Swami SandeepKumar</b>
                         </h5>
-
                         <h6>
                             Web Developer and Designer
                         </h6>
-                        <br>
-                        <br>
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
                                     aria-controls="home" aria-selected="true">About</a>
                             </li>
-
                         </ul>
                     </div>
                 </div>
-                <div class="edit_profile">
-                    <a href="#"><i class="fa-regular fa-pen-to-square"></i> Edit Profile</a>
+                <div class="col-md-2">
+                    <div class="edit_profile fade-in delay-2">
+                        <a href="#"><i class="fa-regular fa-pen-to-square"></i> Edit Profile</a>
+                    </div>
                 </div>
-                 
-                
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="profile-work">
+                    <div class="profile-work fade-in delay-3">
                         <p>Add your Links</p>
-                        <a href="#" id="add_link">Add Link    <i class="fa-solid fa-pen"></i></i></a>
-                        <br>
-                        <a href="https://github.com/Niks150/Niks150">Git Hub : <h4 class="link">
-                                https://github.com/Niks150/Niks150</h4></a>
-                        <a href="https://www.linkedin.com/in/sandeep-swami-b14553321/">LinkedIn :<h4 class="link">
-                                https://www.linkedin.com/in/sandeep-swami-b14553321/</h4> </a>
-
-                       
+                        <a href="#" id="add_link">Add Link <i class="fa-solid fa-plus"></i></a>
+                        <a href="https://github.com/Niks150/Niks150">Git Hub : 
+                            <h4 class="link">https://github.com/Niks150/Niks150</h4>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sandeep-swami-b14553321/">LinkedIn :
+                            <h4 class="link">https://www.linkedin.com/in/sandeep-swami-b14553321/</h4>
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-8">
-                    <div class="tab-content profile-tab" id="myTabContent">
+                    <div class="tab-content profile-tab fade-in delay-4" id="myTabContent">
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <div class="row">
+                            <div class="row row-info">
                                 <div class="col-md-6">
                                     <label>Parul Enrollment No.</label>
                                 </div>
@@ -114,7 +113,7 @@
                                     <p>2203031080277</p>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row row-info">
                                 <div class="col-md-6">
                                     <label>Name</label>
                                 </div>
@@ -122,15 +121,15 @@
                                     <p>Swami Sandeep</p>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6 ">
+                            <div class="row row-info">
+                                <div class="col-md-6">
                                     <label>Email</label>
                                 </div>
                                 <div class="col-md-6">
                                     <p>sandeepswami344@gmail.com</p>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row row-info">
                                 <div class="col-md-6">
                                     <label>Phone</label>
                                 </div>
@@ -138,7 +137,7 @@
                                     <p>9016372258</p>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row row-info">
                                 <div class="col-md-6">
                                     <label>Profession</label>
                                 </div>
@@ -147,12 +146,98 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </form>
     </div>
-</body>
 
+    <script>
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize animations
+            const fadeElements = document.querySelectorAll('.fade-in');
+            setTimeout(() => {
+                fadeElements.forEach(el => {
+                    el.classList.add('active');
+                });
+            }, 100);
+            
+            // Mobile menu toggle
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav_links');
+            
+            if (menuToggle) {
+                menuToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    
+                    // Animate hamburger to X
+                    const spans = this.querySelectorAll('span');
+                    this.classList.toggle('active');
+                    
+                    if (this.classList.contains('active')) {
+                        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                        spans[1].style.opacity = '0';
+                        spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+                    } else {
+                        spans[0].style.transform = 'none';
+                        spans[1].style.opacity = '1';
+                        spans[2].style.transform = 'none';
+                    }
+                });
+            }
+            
+            // Handle dropdowns on mobile
+            const dropdowns = document.querySelectorAll('.dropdown');
+            
+            dropdowns.forEach(dropdown => {
+                const link = dropdown.querySelector('a');
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            });
+            
+            // Navbar shrink on scroll
+            window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.nav_bar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+            
+            // Add link functionality
+            const addLinkBtn = document.getElementById('add_link');
+            if (addLinkBtn) {
+                addLinkBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const title = prompt('Enter link title:');
+                    if (!title) return;
+                    
+                    const url = prompt('Enter URL:');
+                    if (!url) return;
+                    
+                    const profileWork = document.querySelector('.profile-work');
+                    const linkElement = document.createElement('a');
+                    linkElement.href = url.startsWith('http') ? url : 'https://' + url;
+                    linkElement.innerHTML = `${title}: <h4 class="link">${linkElement.href}</h4>`;
+                    profileWork.appendChild(linkElement);
+                    
+                    // Add animation
+                    linkElement.style.opacity = '0';
+                    linkElement.style.transform = 'translateX(20px)';
+                    setTimeout(() => {
+                        linkElement.style.transition = 'all 0.5s ease';
+                        linkElement.style.opacity = '1';
+                        linkElement.style.transform = 'translateX(0)';
+                    }, 50);
+                });
+            }
+        });
+    </script>
+</body>
 </html>

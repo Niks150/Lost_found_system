@@ -2,25 +2,9 @@
 
 
 
-// Attach event listeners to images
-document.querySelectorAll('.image').forEach(image => {
-    image.addEventListener('click', (e) => {
-        e.preventDefault();
-        openLoginModal();
-    });
-});
-document.addEventListener("DOMContentLoaded", function () {
-    const images = document.querySelectorAll(".image");
-
-    images.forEach(image => {
-        image.addEventListener("click", function () {
-            window.location.href = "buy_sell.html";
-        });
-    });
-});
 
 
-/*Scroll effect using GSAP*/
+
 // First, import ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
