@@ -27,29 +27,29 @@
                 </div>
             </div>
             <a href="buy_sell.html"><i class="fa fa-map-marker"></i> Buy & Sell</a>
-            <div class="dropdown">
+            <!-- Profile section - hidden by default until login -->
+            <div class="dropdown profile-section" style="display: none;">
                 <a href="profile.html"><i class="fa fa-user"></i> Profile</a>
                 <div class="dropdown-menu">
-
                     <a href="#">Edit Profile</a>
-
                 </div>
             </div>
-            <div class="dropdown">
+            <div class="dropdown login-section">
                 <a href="login.html" alt="_main"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
                 <div class="dropdown-menu">
-                    <a href="#">Log Out</a>
                     <a href="#">Report issue</a>
-
-
                 </div>
             </div>
-
+            <!-- Logout option - hidden by default until login -->
+            <div class="dropdown logout-section" style="display: none;">
+                <a href="#" id="logoutBtn"><i class="fa-solid fa-sign-out-alt"></i> Logout</a>
+                <div class="dropdown-menu">
+                    <a href="#">Report issue</a>
+                </div>
+            </div>
         </div>
     </div>
     <div class="containerx">
-
-
         <div class="container">
             <div class="image-container">
                 <img class="image_login" src="/assests/Login.jpg" alt="Login Illustration">
@@ -59,7 +59,7 @@
             </div>
             <div id="form-container">
                 <!-- Login Form -->
-                <form id="login-form">
+                <form id="login-form" onsubmit="return handleLogin(event)">
                     <h3>Login Here</h3>
                     <label>Select Role</label>
                     <div class="radio-group">
@@ -76,71 +76,29 @@
                             <label for="admin">Admin</label>
                         </span>
                     </div>
-                    <!-- Replace your existing form with this -->
-                    <form id="loginForm" >
-                        <div class="form-group">
-                            <label for="email">Email <span class="required">*</span></label>
-                            <input type="email" id="email" placeholder="Write here.." required>
-                        </div>
+                    <div class="form-group">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="email" id="email" placeholder="Write here.." required>
+                    </div>
 
-                        <div class="form-group">
-                            <label for="password">Password <span class="required">*</span></label>
-                            <input type="password" id="password" placeholder="Write here.." required>
-                            <a href="#" class="forgot-password">Forget Password?</a>
-                        </div>
+                    <div class="form-group">
+                        <label for="password">Password <span class="required">*</span></label>
+                        <input type="password" id="password" placeholder="Write here.." required>
+                        <a href="#" class="forgot-password">Forget Password?</a>
+                    </div>
 
-                        <button type="submit" class="login-btn">Login</button>
-                    </form>
+                    <button type="submit" class="login-btn">Login</button>
 
-
-                    <button id="googleSignIn" class="google-btn">
+                    <button id="googleSignIn" class="google-btn" type="button">
                         <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4="
                             alt="Google" class="google-icon">
                         Sign in with Google
                     </button>
                 </form>
-
-                <!-- Email Form (Registration Step 1) -->
-
             </div>
         </div>
     </div>
-     <script>
-        function handleLogin(event) {
-            debugger;
-            event.preventDefault(); // Prevent default form submission
-            console.log("Form submitted via inline handler"); // Debug message
-            
-            // Get form values
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            
-            // Get selected role
-            const selectedRole = document.querySelector('input[name="role"]:checked').value;
-            console.log("Selected role:", selectedRole);
-            
-            // Check if admin role is selected
-            if (selectedRole === "admin") {
-                debugger;
-                // For testing, use simple credentials
-                if (email === "admin@example.com" && password === "admin123") {
-                    console.log("Admin credentials correct, redirecting...");
-                    // Redirect to admin panel
-                    window.location.href = "admin_panel.html";
-                    return false;
-                } else {
-                    alert("Invalid admin credentials. Please try again.");
-                }
-            } else {
-                // Handle student or staff login
-                alert("Logged in as " + selectedRole);
-                // Redirect to appropriate page
-                window.location.href = "profile.html";
-            }
-            return false;
-        }
-        </script> 
-
+    
+    
 </body>
-
 </html>

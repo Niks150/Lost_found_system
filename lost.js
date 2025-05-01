@@ -30,6 +30,7 @@ document.getElementById("found-item-form").addEventListener("submit", function (
 
     // Collect form data
     const foundItem = {
+      founderName: document.getElementById("founder-name").value,
         name: document.getElementById("found-item-name").value,
         category: document.getElementById("found-category").value,
         description: document.getElementById("found-description").value,
@@ -57,6 +58,7 @@ document.getElementById('found-item-form').addEventListener('submit', async (e) 
     
     try {
       // Form validation
+      const founderName = document.getElementById("founder-name").value;
       const itemName = document.getElementById('found-item-name').value;
       const category = document.getElementById('found-category').value;
       const description = document.getElementById('found-description').value;
@@ -64,7 +66,7 @@ document.getElementById('found-item-form').addEventListener('submit', async (e) 
       const imageFile = document.getElementById('found-image').files[0];
   
       // Check if all required fields are filled
-      if (!itemName || !category || !description || !location) {
+      if (!founderName || !itemName || !category || !description || !location) {
         throw new Error('Please fill in all required fields');
       }
   
@@ -74,6 +76,7 @@ document.getElementById('found-item-form').addEventListener('submit', async (e) 
       }
   
       const formData = new FormData();
+      formData.append('founder-name', founderName);
       formData.append('item-name', itemName);
       formData.append('category', category);
       formData.append('description', description);
