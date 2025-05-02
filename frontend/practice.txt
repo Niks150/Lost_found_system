@@ -107,7 +107,7 @@ footer .section1 {
         <div class="box-container-4">
             <div class="box-container-grid-2">
 
-                <a href="https://paruluniversity.ac.in/"> <img src="/assests/parul_pic_1.jpg" alt="parul"></a>
+                <a href="https://paruluniversity.ac.in/"> <img src="assests/parul_pic_1.jpg" alt="parul"></a>
             </div>
             <a href="https://paruluniversity.ac.in/" class="explore-all">Apply for admission</a>
         </div>
@@ -243,7 +243,7 @@ footer .section1 {
     </script>
     <div class="nav_container">
         <div class="nav_bar">
-            <img src="/assests/logo.png" alt="Parul University Logo" class="nav_logo">
+            <img src="assests/logo.png" alt="Parul University Logo" class="nav_logo">
 
             <div class="nav_links">
                 <a href="index.html"><i class="fa fa-home"></i> Home</a>
